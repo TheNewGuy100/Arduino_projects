@@ -1,6 +1,6 @@
+#include <Arduino.h>
+
 // VARIABLES
-
-
   int ldr = A0; //Atribui A0 a variável ldr
   int valorldr = 0; //Declara a variável valorldr como inteiro
 
@@ -19,8 +19,11 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
 
   valorldr = analogRead(ldr); //Lê o valor do sensor ldr e armazena na variável valorldr
-  
+
+  Serial.print("Valor lido pelo LDR = "); //Imprime na serial a mensagem
+  Serial.println(valorldr); //Imprime na serial os dados de valorldr
   // INDICADOR DE LOOP DA PLACA
   digitalWrite(LED_BUILTIN, LOW);
   delay(150);
+  
 }
